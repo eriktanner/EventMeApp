@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:id="@+id/et_title"
+        android:hint="Title"
+
+        android:textSize="24sp"
+        android:textCursorDrawable="@null"
+        android:fontFamily="serif"
+        android:typeface="serif"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@color/colorAccent"
+        android:textColorLink="@color/colorAccent" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="1dp"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:id="@+id/et_location"
+        android:hint="Location"
+
+        android:textSize="18sp"
+        android:textCursorDrawable="@null"
+        android:fontFamily="serif"
+        android:typeface="serif"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@color/colorAccent"
+        android:textColorLink="@color/colorAccent" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Spinner"
+            android:id="@+id/tv_date"
+            android:text="Date"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Spinner"
+            android:id="@+id/tv_time"
+            android:text="Time"
+            android:textSize="20sp" />
+
+        <TextView
+            android:text="PM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_am_pm"
+            android:textSize="20sp"
+            android:layout_weight="0.07" />
+
+
+    </LinearLayout>
+
+
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
+        android:gravity="top|left"
+
+        android:lines="9"
+        android:maxLines="25"
+        android:scrollHorizontally="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"
+        android:fadeScrollbars="false"
+
+        android:ems="10"
+        android:id="@+id/et_description"
+        android:hint="Description"
+
+        android:textSize="14sp"
+        android:textCursorDrawable="@null"
+        android:fontFamily="serif"
+        android:typeface="serif"
+        android:inputType="textMultiLine"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@color/colorAccent"
+        android:textColorLink="@color/colorAccent" />
+
+
+
+
+
+    <Button
+        android:text="Create Event"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="165dp"
+        android:id="@+id/bt_create_event"
+        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:typeface="serif"
+        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+        android:textSize="18sp" />
+
+</LinearLayout>

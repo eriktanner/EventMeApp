@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eventmeapp.eventmeapp">
+
+
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:background="@color/colorPrimary"
+        android:theme="@style/Theme.Design.Light"
+        android:label="EventMe">
+        <activity android:name=".LoginScreen"
+            android:label="Login" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".LoginRegisterScreen"/>
+        <activity android:name=".Settings"/>
+        <activity android:name=".CreateEvent" />
+        //Maps android key
+    <meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="AIzaSyAezJY4Y86X6ENC-XNVl8gz193BS9jo60Y "/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"
+            />
+
+
+    </application>
+    //old versions of android cannot use map
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"
+        />
+</manifest>
