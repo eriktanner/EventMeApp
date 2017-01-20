@@ -20,7 +20,6 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -45,12 +44,6 @@ public class LoginScreen extends Activity {
     Button loginButton;
 
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
-    private GoogleApiClient mGoogleApiClient;
 
 
     @Override
@@ -119,13 +112,6 @@ public class LoginScreen extends Activity {
     }
 
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        //TODO client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-
-
-
-
 
 
 
@@ -144,29 +130,6 @@ public class LoginScreen extends Activity {
                 .setActionStatus(Action.STATUS_TYPE_COMPLETED)
                 .build();
     }
-
-
-
-/*
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        //TODO client.connect();
-        //TODO AppIndex.AppIndexApi.start(client, getIndexApiAction());
-    }
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        //TODO client.disconnect();
-    }
-*/
 
 
 
