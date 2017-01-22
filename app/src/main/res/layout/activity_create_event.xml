@@ -51,6 +51,7 @@
         android:layout_marginLeft="4dp">
 
         <TextView
+            android:layout_marginTop="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/Widget.AppCompat.Spinner"
@@ -59,6 +60,7 @@
             android:textSize="20sp" />
 
         <TextView
+            android:layout_marginTop="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/Widget.AppCompat.Spinner"
@@ -67,15 +69,27 @@
             android:textSize="20sp" />
 
         <TextView
+            android:layout_marginTop="3dp"
             android:text="PM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_am_pm"
             android:textSize="20sp"
-            android:layout_weight="0.07" />
+            android:layout_weight="0.02"/>
+
+        <CheckBox
+            android:text="Private Event"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cbPrivateEvent"
+            android:onClick="itemClicked"
+            android:layout_weight="0.02"
+            android:buttonTint="@color/colorAccent"/>
 
 
     </LinearLayout>
+
 
 
 
@@ -111,9 +125,6 @@
         android:textColorLink="@color/colorAccent" />
 
 
-
-
-
     <Button
         android:text="Create Event"
         android:layout_width="240dp"
@@ -126,5 +137,11 @@
         android:typeface="serif"
         android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
         android:textSize="18sp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarCreateEvent" />
 
 </LinearLayout>

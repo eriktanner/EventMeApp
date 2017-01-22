@@ -1,15 +1,10 @@
 package com.eventmeapp.eventmeapp;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 
 /**
@@ -21,7 +16,7 @@ public class Settings extends AppCompatActivity { //
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.settings_bar_layout);
+        getSupportActionBar().setCustomView(R.layout.custom_bar_settings);
         setContentView(R.layout.activity_settings);
 
         ImageView backButton = (ImageView) findViewById(R.id.iv_back);

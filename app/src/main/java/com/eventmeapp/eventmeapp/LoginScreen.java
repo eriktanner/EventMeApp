@@ -39,7 +39,7 @@ public class LoginScreen extends Activity {
     ConnectToServer connectionClass;
     EditText loginUserName, password;
 
-    public LoginRequest doLogin;
+    LoginRequest doLogin;
     ProgressBar pbbar;
     Button loginButton;
 

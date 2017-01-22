@@ -11,7 +11,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 
 
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.custom_bar_layout);
+        getSupportActionBar().setCustomView(R.layout.custom_bar_mainactivity);
         setContentView(R.layout.activity_main);
 
         /*Tab Manager*/
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
         settingsButton = (ImageView) findViewById(R.id.iv_settings);
-        markerButtonHeader = (ImageView) findViewById(R.id.iv_settings);
+        //markerButtonHeader = (ImageView) findViewById(R.id.iv_settings);
 
 
 
@@ -51,15 +50,14 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(mainIntent);
             }
         });
+        /*
         markerButtonHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*TODO //Open a Window that goes over current window, like an info window, which we will
-                 *TODO //use to explain the app, such as how to create an event and what are groups
-                 */
+
             }
         });
-
+        */
 
         //Sets Icons For Tabs
         View view1 = getLayoutInflater().inflate(R.layout.customtab, null);

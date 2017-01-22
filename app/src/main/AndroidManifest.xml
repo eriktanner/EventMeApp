@@ -39,7 +39,7 @@
     android:value="AIzaSyAezJY4Y86X6ENC-XNVl8gz193BS9jo60Y "/>
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>
-        
+
     </application>
     //old versions of android cannot use map
     <uses-feature

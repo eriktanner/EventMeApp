@@ -1,20 +1,16 @@
 package com.eventmeapp.eventmeapp;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -22,7 +18,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -34,8 +29,6 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import java.util.HashMap;
 
 
 /**
@@ -63,7 +56,7 @@ public class TabMap extends Fragment implements OnMapReadyCallback, GoogleApiCli
     CameraPosition mOrigin;
 
     MarkerOptions mMarkerOptionsToday, mMarkerOptionsNotToday;
-    protected HashMap<Marker, InfoEvent> eventMarkerMap;
+    //protected HashMap<Marker, InfoEvent> eventMarkerMap;
 
 
 
@@ -102,15 +95,7 @@ public class TabMap extends Fragment implements OnMapReadyCallback, GoogleApiCli
             mMapview.getMapAsync(this);
         }
 
-        /*Create Event Button*/
-        Button bCreateEvent = (Button) getView().findViewById(R.id.b_link_event);
-        bCreateEvent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent mainIntent = new Intent(getActivity(), CreateEvent.class);
-                startActivity(mainIntent);
-            }
-        });
+
     }
 
     @Override
@@ -293,15 +278,15 @@ public class TabMap extends Fragment implements OnMapReadyCallback, GoogleApiCli
 
     /*********************** Markers ******************************************/
 
-    public Marker placeMarker(InfoEvent eventInfo) {
+    /*public Marker placeMarker() {
 
         Marker newMarker  = mMap.addMarker(new MarkerOptions()
                                     .position(eventInfo.getLatLng())
-                                    .title(eventInfo.getTitle())
+                                    .title(eventInfo.getEventTitle())
                                     .snippet(eventInfo.getLocation()));
         return newMarker;
 
-    }
+    }*/
 
     public void setUpEventSpots() {
 
