@@ -196,7 +196,7 @@ public class CreateEvent extends AppCompatActivity {
         String sLocation = etLocation.getText().toString();
         String sTime = ""+ year + "-" + month + 1 + "-" + day + " " + mHour + ":" + pad(mMinute, false)+ ":" + "00";
         String sDescription = etDescription.getText().toString();
-        int iGroupKey = 1;
+        int iGroupKey = 1; //TODO
         double myLong = getLatLng().longitude;
         double myLat = getLatLng().latitude;
         int isPrivate = itemClicked(checkBox);
