@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EventMeApp</string>
+    <string name="buttonSize">280dp</string>
+    <string name="facebook_app_id">1486212251404009</string>
+    <string name="textview">TextView</string>
+    <string name="markerstring">How Do I Create an Event?\n Steps\n 1. Find desired location on map.\n 2. Press down on location for 1 second to add marker\nNote: Private events require invitation to be visible\n</string>
+    <string name="windowText">Info window clicked</string>
+</resources>
