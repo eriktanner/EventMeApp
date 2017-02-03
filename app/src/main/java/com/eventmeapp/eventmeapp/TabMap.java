@@ -332,6 +332,7 @@ public class TabMap extends Fragment implements OnMapReadyCallback,GoogleMap.OnM
         Message mesg = new Message();
         Bundle b = new Bundle();
         b.putString("title", marker.getTitle());
+        b.putString("location",marker.getSnippet());
         mesg.setData(b);
         handler.sendMessage(mesg);
 
@@ -343,6 +344,7 @@ public class TabMap extends Fragment implements OnMapReadyCallback,GoogleMap.OnM
             Bundle b = msg.getData();
             Intent in = new Intent(getActivity(),EventPage.class);
             in.putExtra("title", b.getString("title"));
+            in.putExtra("location", b.getString("location"));
             TabMap.this.startActivity(in);
         }
     };

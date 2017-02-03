@@ -19,13 +19,15 @@ public class EventPage extends AppCompatActivity { //
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         String s= getIntent().getStringExtra("title");
+        String s2 = getIntent().getStringExtra("location");
         super.onCreate(savedInstanceState);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.custom_bar_settings);
         setContentView(R.layout.single_event);
         TextView textViewObj = (TextView) findViewById(R.id.textviewid);
         textViewObj.setText(s);
-
+        TextView snippetText = (TextView) findViewById(R.id.location_text);
+        snippetText.setText(s2);
         ImageView backButton = (ImageView) findViewById(R.id.iv_back);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
